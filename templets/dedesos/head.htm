@@ -1,0 +1,22 @@
+  <div class="head1">
+    <div class="head clear">
+      <div class="top clear">
+        <div class="logo left">
+          <h1><a href="/" ><img alt="{dede:global.cfg_webname/}" src="/images/logo.png" width="305" height="54" ></a></h1>
+        </div>
+        <div class="top_right right">
+          <div class="top_dh"><img src="/images/dh.jpg" width="272" height="26" /></div>
+          <div class="nav">
+            <ul>           
+            <li><a href='/' {dede:field name=typeid runphp="yes"}(@me=="")? @me=" class='curr'":@me="";{/dede:field}>网站首页</a></li>
+{dede:channel type='top' row='8'     currentstyle="
+<li><a href='~typelink~'  class='curr'>~typename~</a> </li>
+" }
+<li><a href="[field:typelink/]">[field:typename/]</a></li>
+{/dede:channel}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

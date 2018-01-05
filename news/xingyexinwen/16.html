@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="index, follow" />
+<title>步进电机及驱动芯片选型指南_大气机电企业通用织梦源码_站窝窝</title>
+<meta content="步进,电机,及,驱动,芯片,选型,指南,、,系统," name=keywords>
+<meta content="1、系统常识： 步进电机和步进电机驱动器构成步进电机驱动系统。步进电机驱动系统的性能，不但取决于步进电机自身的性能，也取决于步进电机驱动器的优劣。对步进电机驱动器的" name=description>
+<link rel="stylesheet" type="text/css" href="/css/css.css">
+<link rel="stylesheet" type="text/css" href="/css/qq.css">
+<script src="/js/jquery.min.js"></script><script src="/js/gr.js"></script><script src="/js/jquery.qrcode.min.js"></script><script src="/js/qrcode.js"></script>
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<!--[if IE 6]><script type="text/javascript" src="/js/EvPng.js"></script><script language="javascript" type="text/javascript">EvPNG.fix(".pngimg,#pics,#pngimgb");
+</script><![endif]-->
+</head>
+<body>
+<div class="page clear">
+  <div class="head1">
+    <div class="head clear">
+      <div class="top clear">
+        <div class="logo left">
+          <h1><a href="/" ><img alt="大气机电企业通用织梦源码_站窝窝" src="/images/logo.png" width="305" height="54" ></a></h1>
+        </div>
+        <div class="top_right right">
+          <div class="top_dh"><img src="/images/dh.jpg" width="272" height="26" /></div>
+          <div class="nav">
+            <ul>           
+            <li><a href='/' >网站首页</a></li>
+
+<li><a href="/about/">关于我们</a></li>
+
+<li><a href="/product/">产品中心</a></li>
+<li><a href='/news/' class='curr'>新闻资讯</a> </li>
+<li><a href="/hezuo/">合作客户</a></li>
+
+<li><a href="/service/">服务支持</a></li>
+
+<li><a href="/contact/">联系我们</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="content1 clear">
+    <div class="sider left">
+      <div class="about_list">
+        <div class="about-title"><img src="/images/15.jpg" width="202" height="106" /></div>
+        <div class="about-list1">
+          <ul>
+                      
+            <li><a href="/news/gongsixinwen/">公司新闻</a></li>
+            
+            <li><a href="/news/xingyexinwen/">行业新闻</a></li>
+            
+          </ul>
+        </div>
+        <div class="about-fo"></div>
+      </div>
+      <div class="about_news">
+        <h2><img src="/images/zxdt_t.jpg" width="200" height="34" alt="" /></h2>
+        <ul>
+            <li><a href="/news/xingyexinwen/17.html" title="浅谈小电机产业发展前景">浅谈小电机产业发展前景</a></li>
+<li><a href="/news/xingyexinwen/16.html" title="步进电机及驱动芯片选型指南">步进电机及驱动芯片选型指南</a></li>
+<li><a href="/news/gongsixinwen/2.html" title="了解步进电机一些的小知识">了解步进电机一些的小知识</a></li>
+<li><a href="/news/gongsixinwen/1.html" title="步进电机常用的升降频控制方法有两种">步进电机常用的升降频控制方法有两种</a></li>
+
+        </ul>
+      </div>
+      <div class="sider_b"><a href="/contact"><img src="/images/lxwm.jpg" width="202" height="70" / title=""></a></div>
+    </div>
+ 
+    <div class="detail right">
+      <div class="banner_about"><img src="/images/about_banner.jpg" width="775" height="106" /></div>
+      <div class="title_about"><span>行业新闻</span>当前位置：<a href='http://127.0.0.1/'>主页</a> > <a href='/news/'>新闻资讯</a> > <a href='/news/xingyexinwen/'>行业新闻</a> > </div>
+      <div class="about_aa">
+        <div class="newsnei2">
+          <h3>步进电机及驱动芯片选型指南</h3>
+          <h4><span>时间：2014-08-20</span>&nbsp;&nbsp;<span>浏览次数：156</span>&nbsp;&nbsp;<span>编辑：dede58.com</span></h4>
+          <div class="nr">
+          <div>
+	1、系统常识：</div>
+<div>
+	步进电机和步进电机驱动器构成步进电机驱动系统。步进电机驱动系统的性能，不但取决于步进电机自身的性能，也取决于步进电机驱动器的优劣。对步进电机驱动器的研究几乎是与步进电机的研究同步进行的。</div>
+<div>
+	2、系统概述：</div>
+<div>
+	步进电机是一种将电脉冲转化为角位移的执行元件。当步进电机驱动器接收到一个脉冲信号（来自控制器），它就驱动步进电机按设定的方向转动一个固定的角度(称为&ldquo;步距角&rdquo;)，它的旋转是以固定的角度一步一步运行的。</div>
+<div>
+	3、系统控制：</div>
+<div>
+	步进电机不能直接接到直流或交流电源上工作，必须使用专用的驱动电源（步进电机驱动器）。控制器（脉冲信号发生器）可以通过控制脉冲的个数来控制角位移量，从而达到准确定位的目的；同时可以通过控制脉冲频率来控制电机转动的速度和加速度，从而达到调速的目的。</div>
+<div>
+	4、用途：</div>
+<div>
+	步进电机是一种控制用的特种电机，作为执行元件，是机电一体化的关键产品之一，随着微电子和计算机技术的发展（步进电机驱动器性能提高），步进电机的需求量与日俱增。步进电机在运行中精度没有积累误差的特点，使其广泛应用于各种自动化控制系统，特别是开环控制系统。 &nbsp;&nbsp;</div>
+<div>
+	5、步进电机按结构分类：</div>
+<div>
+	步进电机也叫脉冲电机，包括反应式步进电机（VR）、永磁式步进电机（PM）、混合式步进电机（HB）等。</div>
+<div>
+	（1）反应式步进电机：</div>
+<div>
+	也叫感应式、磁滞式或磁阻式步进电机。其定子和转子均由软磁材料制成，定子上均匀分布的大磁极上装有多相励磁绕组，定、转子周边均匀分布小齿和 槽，通电后利用磁导的变化产生转矩。一般为三、四、五、六相；可实现大转矩输出（消耗功率较大，电流最高可达20A，驱动电压较高）；步距角小（最小可做 到六分之一度）；断电时无定位转矩；电机内阻尼较小，单步运行（指脉冲频率很低时）震荡时间较长；启动和运行频率较高。</div>
+<div>
+	（2）永磁式步进电机：</div>
+<div>
+	通常电机转子由永磁材料制成，软磁材料制成的定子上有多相励磁绕组，定、转子周边没有小齿和槽，通电后利用永磁体与定子电流磁场相互作用产生转 矩。一般为两相或四相；输出转矩小（消耗功率较小，电流一般小于2A，驱动电压12V）；步距角大（例如7.5度、15度、22.5度等）；断电时具有一 定的保持转矩；启动和运行频率较低。</div>
+<div>
+	（3）混合式步进电机：</div>
+<div>
+	也叫永磁反应式、永磁感应式步进电机，混合了永磁式和反应式的优点。其定子和四相反应式步进电机没有区别（但同一相的两个磁极相对，且两个磁极 上绕组产生的N、S极性必须相同），转子结构较为复杂（转子内部为圆柱形永磁铁，两端外套软磁材料，周边有小齿和槽）。一般为两相或四相；须供给正负脉冲 信号；输出转矩较永磁式大（消耗功率相对较小）；步距角较永磁式小（一般为1.8度）；断电时无定位转矩；启动和运行频率较高；是目前发展较快的一种步进 电机。</div>
+<div>
+	6、步进电机按工作方式分类：可分为功率式和伺服式两种。</div>
+<div>
+	（1）功率式：输出转矩较大，能直接带动较大负载（一般使用反应式、混合式步进电机）。</div>
+<div>
+	&nbsp;</div>
+<div>
+	（2）伺服式：输出转矩较小，只能带动较小负载（一般使用永磁式、混合式步进电机）。</div>
+<div>
+	7、步进电机的选择：</div>
+<div>
+	（1）首先选择类型，其次是具体的品种与型号。</div>
+<div>
+	（2）反应式、永磁式和混合式三种步进电机的性能指标、外形尺寸、安装方法、脉冲电源种类和控制电路等都不同，价格差异也很大，选择时应综合考虑。</div>
+<div>
+	（3）具有控制集成电路的步进电机应优先考虑。</div>
+<div>
+	8、步进电机的基本参数：</div>
+<div>
+	（1）电机固有步距角：</div>
+<div>
+	它表示控制系统每发一个步进脉冲信号，电机所转动的角度。电机出厂时给出了一个步距角的值，如STP-59D5026型电机给出的值为 0.9&deg;/1.8&deg;（表示半步工作时为0.9&deg;、整步工作时为1.8&deg;），这个步距角可以称之为&lsquo;电机固有步距角&rsquo;，它不一定是电机工作时的实际步距角， 实际步距角和驱动器有关。</div>
+<div>
+	（2）步进电机的相数：</div>
+<div>
+	是指电机内部的线圈组数，目前常用的有二相、三相、四相、五相步进电机。电机相数不同，其步距角也不同，一般二相电机的步距角为 0.9&deg;/1.8&deg;、三相的为0.75&deg;/1.5&deg;、五相的为0.36&deg;/0.72&deg; 。步进电机增加相数能提高性能，但步进电机的结构和驱动电源都会更复杂，成本也会增加。</div>
+<div>
+	（3）保持转矩（HOLDING TORQUE）：</div>
+<div>
+	也叫最大静转矩，是在额定静态电流下施加在已通电的步进电机转轴上而不产生连续旋转的最大转矩。它是步进电机最重要的参数之一，通常步进电机在 低速时的力矩接近保持转矩。由于步进电机的输出力矩随速度的增大而不断衰减，输出功率也随速度的增大而变化，所以保持转矩就成为了衡量步进电机最重要的参 数之一。比如，当人们说2N.m的步进电机，在没有特殊说明的情况下是指保持转矩为2N.m的步进电机。</div>
+<div>
+	（4）步距精度：</div>
+<div>
+	可以用定位误差来表示，也可以用步距角误差来表示。</div>
+<div>
+	（5）矩角特性：</div>
+<div>
+	步进电机的转子离开平衡位置后所具有的恢复转矩，随着转角的偏移而变化。步进电机静转矩与失调角的关系称为矩角特性。</div>
+<div>
+	（6）静态温升：</div>
+<div>
+	指电机静止不动时，按规定的运行方式中最多的相数通以额定静态电流，达到稳定的热平衡状态时的温升。</div>
+<div>
+	（7）动态温升：</div>
+<div>
+	电机在某一频率下空载运行，按规定的运行时间进行工作，运行时间结束后电机所达到的温升叫动态温升。</div>
+<div>
+	（8）转矩特性：</div>
+<div>
+	它表示电机转矩和单相通电时励磁电流的关系。</div>
+<div>
+	（9）启动矩频特性：</div>
+<div>
+	启动频率与负载转矩的关系称为启动矩频特性。</div>
+<div>
+	（10）运行矩频特性/惯频特性：略</div>
+<div>
+	（11）升降频时间：</div>
+<div>
+	指电机从启动频率升到最高运行频率或从最高运行频率降到启动频率所需的时间。</div>
+<div>
+	（12）DETENT TORQUE：</div>
+<div>
+	是指步进电机没有通电的情况下，定子锁住转子的力矩。DETENT TORQUE 在国内没有统一的翻译方式，容易产生误解；反应式步进电机的转子不是永磁材料，所以它没有DETENT TORQUE。 &nbsp;</div>
+<div>
+	9、步进电机的一些特点：</div>
+<div>
+	（1）步进电机没有积累误差：一般步进电机的精度为实际步距角的百分之三到五，且不累积。</div>
+<div>
+	（2）步进电机在工作时，脉冲信号按一定顺序轮流加到各相绕组上（由驱动器内的环形分配器控制绕组通断电的方式）。</div>
+<div>
+	（3）即使是同一台步进电机，在使用不同驱动方案时，其矩频特性也相差很大。</div>
+<div>
+	（4）步进电机与其它电动机不同，其标称额定电压和额定电流只是参考值；又因为步进电机是以脉冲方式供电，电源电压是其最高电压，而不是平均电压，所以，步进电机可以超出其额定值范围工作。但选择时不应偏离额定值太远。</div>
+<div>
+	（5）步进电机外表允许的最高温度： 步进电机温度过高首先会使电机的磁性材料退磁，从而导致力矩下降乃至于失步，因此电机外表允许的最高温度应取决于不同电机磁性材料的退磁点；一般来讲，磁 性材料的退磁点都在摄氏130度以上，有的甚至高达摄氏200度以上，所以步进电机外表温度在摄氏80-90度完全正常。</div>
+<div>
+	（6）步进电机的力矩会随转速的升高而下降：当步进电机转动时，电机各相绕组的电感将形成一个反向电动势；频率越高，反向电动势越大。在它的作用下，电机随频率（或速度）的增大而相电流减小，从而导致力矩下降。</div>
+<div>
+	（7）步进电机低速时可以正常运转,但若高于一定频率就无法启动,并伴有啸叫声。</div>
+<div>
+	步进电机有一个技术参数：空载启动频率，即步进电机在空载情况下能够正常启动的脉冲频率，如果脉冲频率高于该值，电机不能正常启动，可能发生丢 步或堵转。在有负载的情况下，启动频率应更低。如果要使电机达到高速转动，脉冲频率应该有加速过程，即启动频率较低，然后按一定加速度升到所希望的高频 （电机转速从低速升到高速）。</div>
+<div>
+	（8）四相混合式步进电机一般由两相驱动器来驱动，因此，连接时可以采用串联接法或并联接法将四相电机接成两相使用。串联接法一般在电机转速较 低的场合使用，此时需要的驱动器输出电流为电机相电流的0.7倍，因而电机发热小；并联接法一般在电机转速较高的场合使用（又称高速接法），所需要的驱动 器输出电流为电机相电流的1.4倍，因而电机发热较大。</div>
+<div>
+	（9）混合式步进电机驱动器的供电电源电压一般是一个较宽的范围 （比如IM483的供电电压为12～48VDC），电源电压通常根据电机的工作转速和响应要求来选择。如果电机工作转速较高或响应要求较快，那么电压取值 也高，但注意电源电压的纹波不能超过驱动器的最大输入电压，否则可能损坏驱动器。</div>
+<div>
+	（10）供电电源电流一般根据驱动器的输出相电流I来确定。如果采用线性电源，电源电流一般可取I 的1.1～1.3倍；如果采用开关电源，电源电流一般可取I 的1.5～2.0倍。</div>
+<div>
+	（11）当脱机信号FREE为低电平时，驱动器输出到电机的电流被切断，电机转子处于自由状态（脱机状态）。在有些自动化设备中，如果在驱动器 不断电的情况下要求直接转动电机轴（手动方式），就可以将FREE信号置低，使电机脱机，进行手动操作或调节。手动完成后，再将FREE信号置高，以继续 自动控制。</div>
+<div>
+	（12）用简单的方法调整两相步进电机通电后的转动方向，只需将电机与驱动器接线的A+和A-（或者B+和B-）对调即可。</div>
+<div>
+	10、步进电机驱动器的一些特点：</div>
+<div>
+	（1）构成步进电机驱动器系统的专用集成电路： &nbsp;</div>
+<div>
+	&nbsp;A、脉冲分配器集成电路：如三洋公司的PMM8713、PMM8723、PMM8714等。</div>
+<div>
+	&nbsp;B、包含脉冲分配器和电流斩波的控制器集成电路：如SGS公司的L297、L6506等。</div>
+<div>
+	&nbsp;C、只含功率驱动（或包含电流控制、保护电路）的驱动器集成电路：如日本新电元工业公司的MTD1110（四相斩波驱动）和MTD2001（两相、H桥、斩波驱动）。</div>
+<div>
+	&nbsp;D、将脉冲分配器、功率驱动、电流控制和保护电路都包括在内的驱动控制器集成电路，如东芝公司的TB6560AHQ、MOTOROLA公司的SAA1042（四相）和ALLEGRO公司的UCN5804（四相）等。 &nbsp; &nbsp;</div>
+<div>
+	（2）&ldquo;细分驱动&rdquo;概述：</div>
+<div>
+	概念：</div>
+<div>
+	将&ldquo;电机固有步距角&rdquo;细分成若干小步的驱动方法，称为细分驱动，细分是通过驱动器精确控制步进电机的相电流实现的，与电机本身无关。其原理是， 让定子通电相电流并不一次升到位，而断电相电流并不一次降为0（绕组电流波形不再是近似方波，而是N级近似阶梯波），则定子绕组电流所产生的磁场合力，会 使转子有N个新的平衡位置（形成N个步距角）。</div>
+<div>
+	最新技术发展：</div>
+<div>
+	国内外对细分驱动技术的研究十分活跃，高性能的细分驱动电路，可以细分到上千甚至任意细分。目前已经能够做到通过复杂的计算使细分后的步距角均匀一致，大大提高了步进电机的脉冲分辨率，减小或消除了震荡、噪声和转矩波动，使步进电机更具有&ldquo;类伺服&rdquo;特性。</div>
+<div>
+	对实际步距角的作用：在没有细分驱动器时，用户主要靠选择不同相数的步进电机来满足自己对步距角的要求。如果使用细分驱动器，则用户只需在驱动器上改变细分数，就可以大幅度改变实际步距角，步进电机的&lsquo;相数&rsquo;对改变实际步距角的作用几乎可以忽略不计。</div>
+<div>
+	采用细分技术与步进电机精度提高的关系：步进电机的细分技术实质上是一种电子阻尼技术，其主要目的是减弱或消除步进电机的低频振动，提高电机的 运转精度只是细分技术的一个附带功能。细分后电机运转时对每一个脉冲的分辨率提高了，但运转精度能否达到或接近脉冲分辨率还取决于细分驱动器的细分电流控 制精度等其它因素。不同厂家的细分驱动器精度可能差别很大；细分数越大精度越难控制。</div>
+<div>
+	真正的细分对驱动器要有相当高的技术要求和工艺要求，成本亦会较高。国内有一些驱动器采用对电机相电流进行&ldquo;平滑&rdquo;处理来取代细分，属于&ldquo;假细分&rdquo;，&ldquo;平滑&rdquo;并不产生微步，会引起电机力矩的下降。真正的细分控制不但不会引起电机力矩的下降，相反，力矩会有所增加。</div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;生产厂家对步进电机驱动系统的通俗表述如下：</div>
+<div>
+	&nbsp; &nbsp;步进电机是一个把电脉冲转换成离散的机械运动的装置，与其匹配的驱动器共同组成一个可控的步进电机运动系统，具有良好的数据控制特性。在接受来自控制器 （PLC、单片机等可编程处理器）的工作指令（开关脉冲信号）时，其驱动器依据工作指令向定子绕组有序励磁，使定子内部建立一个实时响应的脉动的、非连贯 性变化的磁场，并作用于周边带有很多小齿的转子，使转子产生旋转运动，即施加 一个脉冲，马达转动一步。在理想的情况下，其转子旋转的速度、累计旋转角度完全同步于控制器输入的脉冲频率及脉冲数，因而，只需在规定的时间内向步进电机 运动系统提供有效的工作指令，转子将会被准确地驱动到设定的角度位置，在进一步的工作指令到来之前，始终保持在该位置。</div>
+<div>
+	&nbsp; &nbsp;步进电机的双向驱动、固有的刹车制动性能、可适当调整的输出扭矩、功率控制、精确的位置度、高分辨率、良好的数字交互界面，且仅采用开环控制即能达到良好 的使用效果等是其显著的优势。而且与伺服系统比较，其单位体积输出功率大、转动惯量小、无漂流及起动峰涌现象、无位置累积误差等良好优点，是一种成本低廉 的数字控制类电机。</div>
+<div>
+	&nbsp; &nbsp;正由于具备以上固有的优点，在众多领域已奠定了其应用地位，并被广泛应用于需要控制旋转角度、速度、位置和同步性的诸多领域，如办公室自动化、安防、医疗设备，纺织品机器、舞台灯光、贩卖机与售票机，机械自动化等。&nbsp;</div>
+<div>
+	&nbsp;</div>
+<div>
+	选用步进电机时应注意以下几点：</div>
+<div>
+	1、一般应选用力矩比实际需要大百分之五十到百分之百的步进电机，因为步进电机不能过负载运行，即便是瞬间过载都可能造成失步、停转或不规则原地来回作动。</div>
+<div>
+	2、上位控制器输入的脉冲电流必须够大（一般要&gt;10mA），以确保光电耦合器稳定导通，否则会导致步进电机失步；如果输入脉冲频率过高，会因个别脉冲接收不到，导致步进电机失步。</div>
+<div>
+	3、启动频率不应太高，应在启动程序中设置加速过程，即从规定的启动频率开始，加速到设定频率，否则就可能不稳定，甚至处于惰态。</div>
+<div>
+	4、电机如果未固定好，造成强烈共振，也会导致步进电机失步。</div>
+<div>
+	5、应了解步进电机的固有弱点：输入脉冲频率过高，易导致丢步；输入脉冲频率过低，易出现共振；转速偏高时扭矩降低明显。</div>
+<div>
+	6、应了解最新型步进电机的性能，必要时选用采用了最新控制技术的高级步进电机系统，高级系统既可以使步进电机在高速状态下减少共振，还能运用减少步进电机反电动势的技术，增加电机在高速状态下的扭矩。</div>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;选用步进电机驱动器应注意以下几点：</div>
+<div>
+	1、使用步进电机驱动器注意事项</div>
+<div>
+	1）电源电压要合适（过压可能造成驱动模块的损坏），直流输入的+/-极性不得接错，驱动控制器的电流设定值应该合适（开始时不要太大）；</div>
+<div>
+	2）控制信号线接牢靠，工业环境下应考虑屏蔽问题（如采用双绞线）；</div>
+<div>
+	3）不要一开始就把所有线全接上，可先进行最基本系统的连接，确认运行良好后再完成全部连接。</div>
+<div>
+	4）必须事先确认好接地端和浮空端。</div>
+<div>
+	5）刚开始运行时，仔细观察电机的声音和温升情况，发现异常应立即停机调整。</div>
+<div>
+	2、一般步进电机驱动器识别的最低脉冲脉宽和2细分下的最高接受频率</div>
+<div>
+	一般识别的最低脉冲脉宽不少于2微秒，2细分下的最高接受频率为40khz左右&nbsp;</div>
+<div>
+	3、步进电机驱动器的一般故障现象</div>
+<div>
+	不工作，丢步（也许电机力不够），时走时停，大小步，震动大，抖动明显，乱转，缺相等。</div>
+<div>
+	&nbsp;</div>
+<div>
+	选用步进电机控制器应注意以下几点：</div>
+<div>
+	1、步进电机的驱动电路根据控制信号工作，控制信号由单片机（或其它如PLC等）产生。其基本原理作用如下：</div>
+<div>
+	(1)控制换相顺序</div>
+<div>
+	通电换相这一过程称为脉冲分配。例如：三相步进电机的三拍工作方式，其各相通电顺序为A-B-C－D,通电控制脉冲必须严格按照这一顺序分别控制A,B,C，D相的通断。</div>
+<div>
+	(2)控制步进电机的转向</div>
+<div>
+	如果给定工作方式正序换相通电，步进电机正转，如果按反序通电换相，则电机就反转。</div>
+<div>
+	(3)控制步进电机的速度</div>
+<div>
+	如果给步进电机发一个控制脉冲，它就转一步，再发一个脉冲，它会再转一步。两个脉冲的间隔越短，步进电机就转得越快。调整单片机发出的脉冲频率，就可以对步进电机进行调速。</div>
+<div>
+	2、PLC与步进电机驱动器接线指南：</div>
+<div>
+	q0.0----&gt;控制脉冲 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;q0.2----&gt;控制方向 &nbsp; &nbsp; &nbsp; &nbsp;L+----&gt;共阳端 &nbsp; &nbsp; &nbsp; &nbsp;L+与pul+、dir+相接</div>
+<div>
+	q0.0 -----&gt;控制脉冲与pul-连接 &nbsp; &nbsp;q0.2-----&gt;控制方向与dir-连接</div>
+<div>
+	注意脉冲和方向均串1k电阻</div>
+<div>
+	&nbsp;</div>
+<div>
+	选用步进马达IC应注意以下两点：</div>
+<div>
+	1、选用高集成度、技术成熟的最新马达IC产品，有利于加快电子类运动控制产品更新换代的速度，有利于降低产品开发的难度，有利于拓宽单一产品的实际应用范围，有利于提高产品的性价比。</div>
+<div>
+	2、目前技术领先的高集成度马达IC产品主要有，德国TRINAMIC运动控制产品、东芝马达IC产品等，这些厂家步进马达IC的共同特点是体积小、集成度高、运行稳定、性价比高、供货渠道稳定多元。</div>
+
+          </div>
+              <div class="">
+                <div class="bshare-custom"><a title="分享到" href="http://www.bShare.cn/" id="bshare-shareto" class="bshare-more">分享到</a><a title="分享到QQ空间" class="bshare-qzone">QQ空间</a><a title="分享到新浪微博" class="bshare-sinaminiblog">新浪微博</a><a title="分享到人人网" class="bshare-renren">人人网</a><a title="分享到腾讯微博" class="bshare-qqmb">腾讯微博</a><a title="分享到豆瓣" class="bshare-douban">豆瓣</a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div>
+                <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script></div>
+            </ul>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+        <div class="poofen">
+          <ul>
+            <li style=" float:right;"><a href="javascript:history.go(-1);" style=" color:#C00;">返 回</a></li>
+            <li>上一篇：没有了 </li>
+            <li>下一篇：<a href='/news/xingyexinwen/17.html'>浅谈小电机产业发展前景</a> </li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+    <div class="bottom_lxwm">
+    <div class="bottom_lxwm_con">
+      <div class="lxwm_bot">
+        <div class="lxwm_A left">
+          <p><span style="font-family:Microsoft YaHei;color:#FFFFFF;"><strong>联系方式</strong></span><br />
+            电话：0551-8888888,0551-8888888   传真：0551-8888888 <br />
+            邮箱：6009709@qq.com <br />
+            QQ：6009709，6009709<br />
+            地址：安徽省合肥市淮河路步行街明教寺藏精阁<br />
+          </p>
+          <p>版权所有：机电有限公司网站 皖ICP备07010836号-1 <br />
+          </p></div>
+        <div class="lxwm_c right"><img src="/images/2wm.jpg" width="109" height="157" border="0" usemap="#Map2" />
+          <map name="Map2" id="Map2">
+            <area shape="rect" coords="11,133,38,160" href="tencent://message/?uin=xxxxxxx" />
+            <area shape="rect" coords="43,133,68,161" href="mailto:xxxxxxx@qq.com" target="_blank" />
+            <area shape="rect" coords="75,135,101,163" href="weibo.com" target="_blank" />
+          </map>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</div>
+</body>
+</html>
+<link href="/style/css/qq.css" rel="stylesheet" type="text/css" />
+<div class="kefu" id="kefu">
+  <div class="kefu-l pngimg"></div>
+  <div class="kefu-r">
+    <div class="kftop">
+      <div id="guanbi"></div>
+    </div>
+    <div class="kfbox">
+      <ul>
+        <li class="qq"><a target="_blank" href="tencent://message/?uin=xxxxxxx" rel="nofollow">在线客服-1号</a></li>
+        <li class="qq"><a target="_blank" href="tencent://message/?uin=xxxxxxx" rel="nofollow">在线客服-2号</a></li>
+        <li class="qq"><a target="_blank" href="tencent://message/?uin=xxxxxxx" rel="nofollow">在线客服-3号</a></li>
+        <li class="bs"></li>
+        <li class="tell"><a target="_blank" title="xxxxxxx" rel="nofollow">xxxxxxx</a></li>
+        <li class="bs"></li>
+        <li class="codeer"><span>网站<br>
+          二维码</span><img src="http://chart.apis.google.com/chart?chs=75x75&cht=qr&chld=L|0&chl=http://127.0.0.1"  /></li>
+      </ul>
+    </div>
+    <div class="kfbottom"></div>
+  </div>
+</div>
+
+<script> var kefu = new Floaters(); kefu.addItem("kefu",-1,180,"");kefu.play("kefu");</script><script>$('#guanbi').click(function(){
+ $('#kefu .kefu-l').animate({width:'30px'},500);
+ $('#kefu .kefu-r').animate({width:0},100);
+});
+
+$(function(){
+ $('.kefu-l').click(function(){
+  $(this).animate({width:0},100);
+  $('.kefu-r').animate({width:'157px'},100);
+ })
+});
+
+</script> 

@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="index, follow" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}">
+<meta name="description" content="{dede:global.cfg_description/}">
+<meta name="author" content="design by dede58.com">
+<link rel="stylesheet" type="text/css" href="/css/css.css">
+<link rel="stylesheet" type="text/css" href="/css/qq.css">
+<script src="/js/jquery.min.js"></script><script src="/js/gr.js"></script><script src="/js/jquery.qrcode.min.js"></script><script src="/js/qrcode.js"></script>
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<!--[if IE 6]><script type="text/javascript" src="/js/EvPng.js"></script><script language="javascript" type="text/javascript">EvPNG.fix(".pngimg,#pics,#pngimgb");
+</script><![endif]-->
+</head>
+<body>
+<div class="page clear">
+{dede:include filename="head.htm"/} 
+  <script type="text/javascript" src="/js/Marquee.js"></script>
+  <style type="text/css">
+#marquee1{width:965px;height:165px;overflow:hidden; margin:0 auto;}
+
+</style>
+  <script type="text/javascript">$(function(){
+	
+	$('#marquee1').kxbdSuperMarquee({
+		isMarquee:true,
+		isEqual:false,
+		scrollDelay:20,
+		btnGo:{left:'#goL2',right:'#goR2'},
+		direction:'left'
+		
+	});
+	
+});
+
+</script>
+  <div class="banner clear"><script type="text/javascript" src="/js/common.js"></script>
+    <style type="text/css">
+.banner_index{height:539px;position: relative;overflow:hidden;width: 1000px;margin:0 auto;}
+.banner_index .btn,.banner_pro .bBtn{position: absolute;top:173px;width: 109px;height: 256px;display: block;z-index: 3;}
+.banner_index .btnPre,.banner_pro .bPre{background: url(images/bg_btnPre_index.png) no-repeat 0 0;left:20px;}
+.banner_index .btnPre:hover,.banner_pro .bPre:hover{background: url(images/bg_btnPre_index_hover.png) no-repeat 0 0;}
+.banner_index .btnNext,.banner_pro .bNext{background: url(images/bg_btnNext_index.png) no-repeat 0 0;right: 20px;}
+.banner_index .btnNext:hover,.banner_pro .bNext:hover{background: url(images/bg_btnNext_index_hover.png) no-repeat 0 0;}
+.banner_index .banner_wrap{position: absolute;left:0px;top: 0px; z-index: 2;}
+.banner_index .banner_wrap li{width: 1030px;float: left;}
+
+</style>
+    <div class="banner_index"><a href="javascript:void(0);" class="btn btnPre pngimg" id="banner_index_pre" onfocus="this.blur();"></a><a href="javascript:void(0);" class="btn btnNext pngimg" id="banner_index_next" onfocus="this.blur();"></a>
+      <ul class="banner_wrap" id="banner_index">
+            {dede:arclist typeid='23'}
+        <li><a ><img src="[field:litpic /]" alt="[field:title /]" width="1000" height="539" /></a></li>
+{/dede:arclist}   
+      </ul>
+    </div>
+    <script type="text/javascript">var ShowPre1 = new ShowPre({box:"banner_index",Pre:"banner_index_pre",Next:"banner_index_next",numIco:"index_numIco",loop:1,auto:1});
+</script></div>
+  <div class="content clear">
+    <div class="yy_title clear"><span><img src="/images/pro_title.jpg" width="80" height="37" alt="产品分类" /></span>
+      <ul>
+      {dede:channel type="sun" typeid="4"} <li><a href="[field:typelink/]">[field:typename/]</a></li> {/dede:channel}      
+      </ul>
+    </div>
+    <div class="pro_con">
+      <h2><a href="/product"><img src="/images/more.jpg" width="68" height="15" alt="更多&gt;" /></a><span><img src="/images/pro_title_1.jpg" width="269" height="33" alt="产品展示" /></span></h2>
+      <div id="marquee1">
+        <ul style="width:2630px;">
+            {dede:arclist typeid='4' row='10'}
+          <li><a href="[field:arcurl /]"title="[field:title /]" ><img src="[field:litpic /]" alt="[field:title /]" />
+            <p>[field:title /]</p>
+            </a></li>
+{/dede:arclist}   
+        </ul>
+      </div>
+    </div>
+    <div class="con02 clear">
+      <div class="con02_con">
+        <div class="about_1 left">
+          <h2><span><a href="/about">+查看更多</a></span><img src="/images/about.jpg" width="154" height="15" alt="公司简介" /></h2>
+          <ul>
+            <img src="/images/about_img.jpg" width="154" height="85" alt="about" />
+            <li><strong>
+              <h3>某某机电有限公司网站</h3>
+              </strong></li>
+            <li>{dede:sql sql='Select content from #@__arctype where id=2'}
+      [field:content function='cn_substr(html2text(@me),450)'/]
+{/dede:sql}...<br />
+            </li>
+          </ul>
+        </div>
+        <div class="news_02 right">
+          <h2><span><a href="/news">+查看更多</a></span><img src="/images/news.jpg" width="111" height="15" alt="新闻资讯" /></h2>
+          <ul>
+            {dede:arclist typeid='15' row='5'}
+           <li><span>[[field:pubdate function="GetDateMK(@me)"/]]</span><a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a></li>
+{/dede:arclist}   
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+{dede:include filename="footer.htm"/} 
+  <div class="yqlj">
+    <div class="yqlj_con clear">
+      <ul>
+        <span><img src="/images/yqlj.jpg" width="60" height="32" /></span>
+        {dede:flink row='24' type='text' titlelen='26' linktype = '2'}
+        <li>[field:link /]</li> {/dede:flink}
+<li><a href="www.zhanoo.com" target="_blank">技术支持</a> </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+{dede:include filename="qq.htm"/} 

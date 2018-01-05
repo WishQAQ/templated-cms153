@@ -1,0 +1,22 @@
+    <div class="sider left">
+      <div class="about_list">
+        <div class="about-title"><img src="/images/{dede:field.typeid function= 'GetTopid(@me)'/}.jpg" width="202" height="106" /></div>
+        <div class="about-list1">
+          <ul>
+                      {dede:channel type='son' noself='yes'}
+            <li><a href="[field:typelink/]">[field:typename/]</a></li>
+            {/dede:channel}
+          </ul>
+        </div>
+        <div class="about-fo"></div>
+      </div>
+      <div class="about_news">
+        <h2><img src="/images/zxdt_t.jpg" width="200" height="34" alt="" /></h2>
+        <ul>
+            {dede:arclist row='6' typeid='15'}
+          <li><a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a></li>
+          {/dede:arclist}
+        </ul>
+      </div>
+      <div class="sider_b"><a href="/contact"><img src="/images/lxwm.jpg" width="202" height="70" / title=""></a></div>
+    </div>

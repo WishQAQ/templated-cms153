@@ -1,0 +1,2 @@
+<li><span><a  href='javascript:void(0);' rel="{ gallery: 'gal1', smallimage: '[field:imgsrc/]',largeimage: '[field:imgsrc/]'
+							}"><img src='[field:imgsrc/]'   width="70" height="60"  ></a></span></li>
